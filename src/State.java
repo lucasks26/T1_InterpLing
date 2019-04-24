@@ -1,24 +1,30 @@
+import java.util.Map;
 import java.util.HashMap;
 
 public class State {
-	private HashMap<String, String> state;
+	private Map<String, Integer> variables;
 	
 	public State() {
-		state = new HashMap<>();
+		variables = new HashMap<>();
 	}
 	
 	public State(String[] ar) {
-		state = new HashMap<>();
+		variables = new HashMap<>();
 		for(int i=0;i<ar.length;i++) {
-			state.put(ar[i].split(",")[0], ar[i].split(",")[1]);
+			variables.put(ar[i].split(",")[0], Integer.valueOf(ar[i].split(",")[1]));
 		}
 	}
 	
-	public void addVar(String var, String val) {
-		state.put(var, val);
+	public void addVar(String var, Integer val) {
+		variables.put(var, val);
 	}
 	
-	public String getVar(String var) {
-		return state.get(var);
+	public Integer getVar(String var) {
+		return variables.get(var);
+	}
+	
+	@Override
+	public String toString() {
+		return variables.toString();
 	}
 }

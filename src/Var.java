@@ -5,9 +5,13 @@ public class Var extends Aexp {
 		this.var = var;
 	}
 	
+	public String getVar() {
+		return var;
+	}
+	
 	@Override
 	public AbsSyntaxTree smallStep(State s) {
-		return new IntVal(Integer.valueOf(s.getVar(var)).intValue());
+		return new IntVal(s.getVar(var).intValue());
 	}
 	
 	@Override
