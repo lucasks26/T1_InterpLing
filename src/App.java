@@ -19,7 +19,7 @@ public class App {
 	
 	public static void compute(AbsSyntaxTree tree, State init) {
 		AbsSyntaxTree aux = tree;
-		System.out.println("Initial State: "+init.toString() + "\nInitial Sentence: "+ aux);
+		System.out.println("Initial Sentence: <" + aux + ", "+ init.toString() +">");
 		int i = 1;
 		while(!(aux instanceof Skip)) {
 			aux = aux.smallStep(init);

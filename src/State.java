@@ -25,6 +25,12 @@ public class State {
 	
 	@Override
 	public String toString() {
-		return variables.toString();
+		String f = "[";
+		String[] keys = variables.keySet().toArray(new String[0]);
+		int size = keys.length;
+		for(int i=0;i<size-1;i++) {
+			f = f + keys[i] + " |-> " + variables.get(keys[i]) + ", ";
+		}
+		return f + keys[size-1] + " |-> " + variables.get(keys[size-1]) + "]";
 	}
 }

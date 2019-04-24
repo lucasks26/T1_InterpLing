@@ -22,7 +22,7 @@ public class Cond extends Prog {
 	
 	@Override
 	public String toString() {
-		return "if " + b + " then {" + c1 + "} else {" + c2 +"}";
+		return "if (" + b + ") then {" + c1 + "} else {" + c2 +"}";
 	}
 
 }

@@ -14,6 +14,6 @@ public class While extends Prog {
 	
 	@Override
 	public String toString() {
-		return "while " + b + " do " + c;
+		return "while (" + b + ") do {" + c +"}";
 	}
 }
