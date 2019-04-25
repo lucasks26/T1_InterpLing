@@ -19,7 +19,7 @@ public class State {
 		variables.put(var, val);
 	}
 	
-	public Integer getVar(String var) {
+	public Integer getValue(String var) {
 		return variables.get(var);
 	}
 	

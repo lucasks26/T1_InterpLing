@@ -11,7 +11,7 @@ public class Var extends Aexp {
 	
 	@Override
 	public AbsSyntaxTree smallStep(State s) {
-		return new IntVal(s.getVar(var).intValue());
+		return new IntVal(s.getValue(var).intValue());
 	}
 	
 	@Override

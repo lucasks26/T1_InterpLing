@@ -14,6 +14,11 @@ public class App {
 		AbsSyntaxTree whileTeste = new While(new Less(new Var("x"), new IntVal(5)), new Att(new Var("x"), new Sum(new Var("x"), new IntVal(1))));
 		
 		compute(whileTeste, s);
+		
+		s = new State(new String[] {"x,1", "y,2"});
+		AbsSyntaxTree swapTeste = new Swap(new Var("x"), new Var("y"));
+		
+		compute(swapTeste,s);
 	}
 	
 	
