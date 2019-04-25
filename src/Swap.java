@@ -19,5 +19,4 @@ public class Swap extends Prog {
 	public String toString() {
 		return "swap(" + e1 + ", " + e2 + ")";
 	}
-	
 }
