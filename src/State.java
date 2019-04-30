@@ -25,6 +25,7 @@ public class State {
 	
 	@Override
 	public String toString() {
+		if (variables.isEmpty()) return "[]";
 		String f = "[";
 		String[] keys = variables.keySet().toArray(new String[0]);
 		int size = keys.length;
