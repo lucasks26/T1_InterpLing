@@ -3,9 +3,9 @@
  * 
  * 	Exemplo 1: While, Not, Greater, Var, IntVal, Att, Sum
  * 
- *  Exemplo 2: Seq, Swap, Var, Att, Sub
+ * 	Exemplo 2: Seq, Swap, Var, Att, Sub
  *  
- *  Exemplo 3: Cond, Eq, Or, Bool, And, Less, Mult
+ * 	Exemplo 3: Cond, Eq, Or, Bool, And, Less, Mult
  * 
  * */
 

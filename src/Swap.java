@@ -1,7 +1,7 @@
 /*
  * Sintaxe:
  * 
- * swap(x_1, x_2), onde x_n pertence a Var
+ * 	swap(x_1, x_2), onde x_n pertence a Var
  * 
  * 	c ::= skip 
  * 		| x := a 
@@ -11,15 +11,16 @@
  * 		| swap(x_1, x_2)
  * 
  * Semântica:
- * 	Big-Step:
- * 		<x1, s> => n1            <x2, s> => n2
- *     ----------------------------------------swap
- *        <swap(x1,x2), s> => s[x1/n2, x2/n1]
+ * 	
+ *	Big-Step:
+ * 	 <x1, s> => n1            <x2, s> => n2
+ *      ----------------------------------------swap
+ *         <swap(x1,x2), s> => s[x1/n2, x2/n1]
  * 
  *	Small-Step:
  *		
- *		-------------------------------------------swap
- *	     <swap(x1,x2), s> -> s[x1/s(x2), x2/s(x1)]
+ *	-------------------------------------------swap
+ *	 <swap(x1,x2), s> -> s[x1/s(x2), x2/s(x1)]
  * */
 
 public class Swap extends Prog {
