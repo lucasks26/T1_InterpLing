@@ -16,6 +16,6 @@ public class Not extends Bexp {
 
 	@Override
 	public String toString() {
-		return e1.toString();
+		return "!(" + e1.toString() +")";
 	}
 }

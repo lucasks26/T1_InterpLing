@@ -1,24 +1,26 @@
 public class App {
 	public static void main(String args[]) {
-		State s = new State(new String[] {"x,10"});
+		State s;
 		
-		AbsSyntaxTree attTeste = new Att(new Var("x"), new IntVal(40));
-		AbsSyntaxTree somaTeste = new Sum(new Var("x"), new IntVal(20));
-		AbsSyntaxTree attTeste2 = new Att(new Var("x"), (Aexp) somaTeste);
-		AbsSyntaxTree seqTeste = new Seq((Prog) attTeste, (Prog) attTeste2);
-		
-		compute(seqTeste, s);
-		
+
+		//while,greater,var,att,sum,equal,not,and,skip,seq,cond,sub,swap,or,mult,less
+		//,,,,,,,,,,
 		
 		s = new State(new String[] {"x,1"});
-		AbsSyntaxTree whileTeste = new While(new Less(new Var("x"), new IntVal(5)), new Att(new Var("x"), new Sum(new Var("x"), new IntVal(1))));
+		AbsSyntaxTree Teste1 = new While(new Not (new Greater(new Var("x"), new IntVal(5))), new Att(new Var("x"), new Sum(new Var("x"), new IntVal(1))));
 		
-		compute(whileTeste, s);
+		compute(Teste1, s);
 		
 		s = new State(new String[] {"x,1", "y,2"});
-		AbsSyntaxTree swapTeste = new Swap(new Var("x"), new Var("y"));
+		AbsSyntaxTree Teste2 = new Seq (new Swap(new Var("x"), new Var("y")),new Att (new Var("x"),new Sub(new Var("x"), new Var("y"))));
 		
-		compute(swapTeste,s);
+		compute(Teste2,s);
+
+		s = new State(new String[] {"x,3", "y,2"});
+		AbsSyntaxTree Teste3 = new Cond(new And(new Or(new Equal(new Var("x"),new Var("y")),new Boolean(true)),new Not(new Less(new Var("y"),new IntVal(2)))),new Att(new Var("x"),new Mult(new Var("x"),new Var("y"))),new Seq( new Skip(),new Skip()));
+
+		compute(Teste3,s);
+
 	}
 	
 	
